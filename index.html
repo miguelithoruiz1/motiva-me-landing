@@ -17,7 +17,7 @@
 <div class="preloader" id="preloader" aria-hidden="true">
   <img src="assets/logo-motiva-me.webp" alt="" />
   <div class="pre-word">MOTIVA<em>-ME</em></div>
-  <div class="pre-pct" id="prePct">0%</div>
+  <div class="pre-pct">Preparando</div>
   <div class="pre-bar"><i id="preBar"></i></div>
 </div>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -35,9 +35,11 @@
       <a href="#que-es">Qué es</a>
       <a href="#modulos">Módulos</a>
       <a href="#cursos">Cursos</a>
+      <a href="#tu-dia">Un día</a>
       <a href="#valores">Valores</a>
       <a href="#planes">Planes</a>
       <a href="#siguenos">Síguenos</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-cyan" href="#lista-de-espera">Lista de espera</a>
   </div>
@@ -59,7 +61,7 @@
           <a class="btn btn-cyan" href="#lista-de-espera">Unirme a la lista de espera</a>
           <a class="btn btn-ghost" href="#modulos">Ver los módulos</a>
         </div>
-        <p class="hero-note">La app aún va camino a Google Play. La lista de espera es la forma de entrar entre los primeros cuando se publique.</p>
+        <p class="hero-note">La app aún va camino a Google Play. Al apuntarte podrás recibir un aviso de lanzamiento; la lista no reserva cupo ni garantiza acceso o disponibilidad.</p>
         <div class="hero-facts" aria-label="Datos clave de Motiva-Me">
           <div><b class="count-num" data-count="2021">2021</b><span>Nace como biblioteca de inspiración</span></div>
           <div><b class="count-num" data-count="8">8</b><span>Módulos y secciones en una sola app</span></div>
@@ -128,67 +130,67 @@
       </div>
 
       <div class="explorer">
-        <div class="mod-list" role="tablist" aria-label="Módulos de Motiva-Me" id="modList">
-<button type="button" class="mod-btn" role="tab" aria-selected="true" data-module="habitos"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Hábitos</b><small>Constancia diaria</small></span></button>
-<button type="button" class="mod-btn" role="tab" aria-selected="false" data-module="metas"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span><b>Metas</b><small>Objetivos con pasos</small></span></button>
-<button type="button" class="mod-btn" role="tab" aria-selected="false" data-module="planificador"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><b>Planificador</b><small>Tu día en orden</small></span></button>
-<button type="button" class="mod-btn" role="tab" aria-selected="false" data-module="finanzas"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 12h.01M18 12h.01"/></svg></span><span><b>Finanzas</b><small>Dinero bajo control</small></span></button>
-<button type="button" class="mod-btn" role="tab" aria-selected="false" data-module="biblioteca"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a1 1 0 0 1 1-1h14v13H5a1 1 0 0 0-1 1Z"/><path d="M4 19a1 1 0 0 0 1 1h14"/></svg></span><span><b>Biblioteca</b><small>Libros y audiolibros</small></span></button>
-<button type="button" class="mod-btn" role="tab" aria-selected="false" data-module="mentores"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5Z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span><span><b>Tu NeuroCoach y Amigo Virtual</b><small>Conversación que guía</small></span></button>
-<button type="button" class="mod-btn" role="tab" aria-selected="false" data-module="motivabot"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4M12 4h.01"/><circle cx="9" cy="13.5" r="1" fill="currentColor"/><circle cx="15" cy="13.5" r="1" fill="currentColor"/></svg></span><span><b>Tu NeuroCoach y Amigo Virtual</b><small>Asistente flotante</small></span></button>
-<button type="button" class="mod-btn" role="tab" aria-selected="false" data-module="cursos"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg></span><span><b>Cursos</b><small>Sección activa</small></span></button>
+        <div class="mod-list" role="group" aria-label="Explorar módulos" id="modList">
+<button type="button" class="mod-btn" aria-pressed="true" aria-controls="panel-habitos" data-module="habitos"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Hábitos</b><small>Constancia diaria</small></span></button>
+<button type="button" class="mod-btn" aria-pressed="false" aria-controls="panel-metas" data-module="metas"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><span><b>Metas</b><small>Objetivos con pasos</small></span></button>
+<button type="button" class="mod-btn" aria-pressed="false" aria-controls="panel-planificador" data-module="planificador"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><b>Planificador</b><small>Tu día en orden</small></span></button>
+<button type="button" class="mod-btn" aria-pressed="false" aria-controls="panel-finanzas" data-module="finanzas"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 12h.01M18 12h.01"/></svg></span><span><b>Finanzas</b><small>Dinero bajo control</small></span></button>
+<button type="button" class="mod-btn" aria-pressed="false" aria-controls="panel-biblioteca" data-module="biblioteca"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a1 1 0 0 1 1-1h14v13H5a1 1 0 0 0-1 1Z"/><path d="M4 19a1 1 0 0 0 1 1h14"/></svg></span><span><b>Biblioteca</b><small>Libros y audiolibros</small></span></button>
+<button type="button" class="mod-btn" aria-pressed="false" aria-controls="panel-mentores" data-module="mentores"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5Z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span><span><b>Chatbot con mentores</b><small>Conversaciones guiadas</small></span></button>
+<button type="button" class="mod-btn" aria-pressed="false" aria-controls="panel-motivabot" data-module="motivabot"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4M12 4h.01"/><circle cx="9" cy="13.5" r="1" fill="currentColor"/><circle cx="15" cy="13.5" r="1" fill="currentColor"/></svg></span><span><b>Tu NeuroCoach y Amigo Virtual</b><small>Asistente flotante</small></span></button>
+<button type="button" class="mod-btn" aria-pressed="false" aria-controls="panel-cursos" data-module="cursos"><span class="ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg></span><span><b>Cursos</b><small>Sección activa</small></span></button>
 </div>
-        <div class="mod-panel" role="tabpanel" id="modPanel" aria-live="polite">
-<div class="mod-panel-content" data-panel="habitos">
+        <div class="mod-panel" id="modPanel">
+<div class="mod-panel-content" id="panel-habitos" data-panel="habitos">
 <span class="tag">Módulo activo</span>
 <h3>Hábitos que se sostienen</h3>
 <p>Crea hábitos pequeños, márcalos cada día y mira tu constancia sin castigarte por un día flojo. Motiva-Me está pensado para retomar, no para abandonar.</p>
 <div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-habitos.webp" alt="Pantallazo real del Gestor de Hábitos de Motiva-Me: copiloto de hábitos con IA, retos de 7 días y las tarjetas de hábitos con racha e historial semanal. Los nombres y descripciones de los hábitos personales van tapados" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real de Hábitos</b> · Captura de la app · Datos personales tapados</p></div>
 <div class="mod-feats"><div><b>Marca en un toque</b><span>Registrar el avance del día toma segundos, desde la pantalla principal.</span></div></div>
 </div>
-<div class="mod-panel-content" data-panel="metas" hidden>
+<div class="mod-panel-content" id="panel-metas" data-panel="metas" hidden>
 <span class="tag">Módulo activo</span>
 <h3>Metas divididas en pasos reales</h3>
 <p>Una meta grande intimida; tres pasos agendados, no. En Motiva-Me divides cada meta en pasos concretos y agendas el primero hoy mismo.</p>
 <div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-metas.webp" alt="Pantallazo real de la Central de Metas de Motiva-Me: estado general, buscador, filtros por categoría y tarjetas de metas con su progreso. Los títulos, montos y fechas de las metas personales van tapados" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real de Metas</b> · Captura de la app · Datos personales tapados</p></div>
 <div class="mod-feats"><div><b>Divide y agenda</b><span>Convierte cada objetivo en pasos pequeños con fecha en tu planificador.</span></div></div>
 </div>
-<div class="mod-panel-content" data-panel="planificador" hidden>
+<div class="mod-panel-content" id="panel-planificador" data-panel="planificador" hidden>
 <span class="tag">Módulo activo</span>
 <h3>Un planificador que habla con todo lo demás</h3>
 <p>Tus hábitos, los pasos de tus metas y tus pendientes del día viven en el mismo calendario. Planear deja de ser otra tarea más.</p>
 <div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-planificador.webp" alt="Pantallazo real del Planificador diario y tareas de Motiva-Me: progreso del día y la lista de tareas vacía, lista para crear la primera tarea" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real de Planificador</b> · Captura de la app · Datos personales tapados</p></div>
 <div class="mod-feats"><div><b>Todo en un solo día</b><span>Hábitos, pasos de metas y tareas comparten la misma vista diaria.</span></div></div>
 </div>
-<div class="mod-panel-content" data-panel="finanzas" hidden>
+<div class="mod-panel-content" id="panel-finanzas" data-panel="finanzas" hidden>
 <span class="tag">Módulo activo · Con IA</span>
 <h3>Finanzas personales sin hojas de cálculo</h3>
 <p>Registra ingresos y gastos, sigue tu avance del mes y usa el escáner asistido por IA para capturar recibos sin digitar todo a mano.</p>
 <div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-finanzas.webp" alt="Pantallazo real de Finanzas de Motiva-Me: consejo financiero del día, balance neto disponible e historial de transacciones. Todos los montos y los datos de las transacciones van tapados" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real de Finanzas</b> · Captura de la app · Datos personales tapados</p></div>
 <div class="mod-feats"><div><b>Escáner asistido por IA</b><span>Fotografía un recibo y la app te ayuda a convertirlo en un registro ordenado.</span></div></div>
 </div>
-<div class="mod-panel-content" data-panel="biblioteca" hidden>
+<div class="mod-panel-content" id="panel-biblioteca" data-panel="biblioteca" hidden>
 <span class="tag">Módulo activo</span>
 <h3>La biblioteca donde nació todo</h3>
 <p>Motiva-Me empezó en 2021 como una biblioteca de inspiración, y ese corazón sigue aquí: libros y audiolibros para alimentar tu mente cada día.</p>
 <div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-biblioteca.webp" alt="Pantallazo real de la Biblioteca de Crecimiento de Motiva-Me: buscador y secciones de audios, libros y videos para leer y escuchar" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real de Biblioteca</b> · Captura de la app · Datos personales tapados</p></div>
 <div class="mod-feats"><div><b>Lee o escucha</b><span>Elige el formato según tu momento: lectura en casa o audiolibro en el camino.</span></div></div>
 </div>
-<div class="mod-panel-content" data-panel="mentores" hidden>
+<div class="mod-panel-content" id="panel-mentores" data-panel="mentores" hidden>
 <span class="tag">Módulo activo</span>
-<h3>Mentores con quienes conversar</h3>
+<h3>Chatbot con mentores</h3>
 <p>Cuando la motivación baja o una decisión pesa, conversa con los mentores del chatbot: perspectiva y un siguiente paso claro, en el momento en que lo necesitas.</p>
-<div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-mentores.webp" alt="Pantallazo real de los escenarios de conversación y la sesión con mentor de Motiva-Me: negación firme, límites sociales, freno consumista y ego y críticas" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real de Tu NeuroCoach y Amigo Virtual</b> · Captura de la app · Datos personales tapados</p></div>
+<div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-mentores.webp" alt="Pantallazo real de los escenarios de conversación y la sesión con mentor de Motiva-Me: negación firme, límites sociales, freno consumista y ego y críticas" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real del chatbot con mentores</b> · Captura de la app · Datos personales tapados</p></div>
 <div class="mod-feats"><div><b>Disponible en cualquier módulo</b><span>La conversación no vive aislada: parte de lo que estás trabajando en la app.</span></div></div>
 </div>
-<div class="mod-panel-content" data-panel="motivabot" hidden>
+<div class="mod-panel-content" id="panel-motivabot" data-panel="motivabot" hidden>
 <span class="tag">Siempre presente</span>
 <h3>Tu NeuroCoach y Amigo Virtual, tu asistente flotante</h3>
 <p>Tu NeuroCoach y Amigo Virtual te acompaña sobre cualquier pantalla de la app: te recuerda el paso que sigue, te ayuda a agendarlo y te mantiene en movimiento.</p>
 <div class="mod-shot"><div class="mini-scene"><div class="mini-phone3d"><div class="mini-phone"><div class="mini-screen real"><img class="mini-real" src="assets/shot-motivabot.webp" alt="Pantallazo real de Tu NeuroCoach y Amigo Virtual Companion en Motiva-Me: el mentor virtual Astro, las personalidades para cambiar y el chat para hablar o escribir" loading="lazy" /><span class="real-badge">Pantallazo real</span></div></div></div></div><p class="mod-shot-caption"><b>Pantallazo real de Tu NeuroCoach y Amigo Virtual</b> · Captura de la app · Datos personales tapados</p></div>
 <div class="mod-feats"><div><b>Sin cambiar de pantalla</b><span>Pídele ayuda justo donde estás, sin perder lo que estabas haciendo.</span></div></div>
 </div>
-<div class="mod-panel-content" data-panel="cursos" hidden>
+<div class="mod-panel-content" id="panel-cursos" data-panel="cursos" hidden>
 <span class="tag">Sección activa · Primer curso en preparación</span>
 <h3>Cursos dentro de la misma app</h3>
 <p>La sección de Cursos ya está activa en Motiva-Me y el primer curso está en preparación para subirse. Su nombre se anunciará cuando esté publicado dentro de la aplicación.</p>
@@ -266,50 +268,18 @@
   </section>
 
   <!-- LISTA DE ESPERA -->
-  <!-- PLANES — Precios de EJEMPLO, por confirmar antes del lanzamiento. No son precios finales. -->
+  <!-- PLANES: disponibilidad y precios aún no confirmados -->
   <section id="planes">
     <div class="wrap">
       <div class="sec-head">
-        <p class="kick">Planes</p>
-        <h2>Elige cómo empezar tu cambio</h2>
-        <p>Precios de ejemplo en pesos colombianos, para maquetar la sección. Los precios finales se confirmarán antes del lanzamiento.</p>
+        <p class="kick">Planes y precios</p>
+        <h2>Planes aún por anunciar</h2>
+        <p>Motiva-Me todavía no está disponible para compra. Los planes, sus características y sus precios no están confirmados.</p>
       </div>
-      <div class="plans-grid">
-        <article class="plan-card">
-          <h3 class="plan-name">Inicio</h3>
-          <p class="plan-price">$0 <small>COP · gratis</small></p>
-          <p>Para empezar tu cambio hoy.</p>
-          <ul>
-            <li>Hábitos y metas</li>
-            <li>Planificador diario</li>
-            <li>Biblioteca de inspiración</li>
-          </ul>
-          <a class="btn btn-ghost" href="#lista-de-espera">Empezar gratis</a>
-        </article>
-        <article class="plan-card featured">
-          <h3 class="plan-name">Plus</h3>
-          <p class="plan-price">$19.900 <small>COP / mes</small></p>
-          <p>Para avanzar con acompañamiento.</p>
-          <ul>
-            <li>Todo lo de Inicio</li>
-            <li>Finanzas con escáner asistido por IA</li>
-            <li>Tu NeuroCoach y Amigo Virtual</li>
-          </ul>
-          <a class="btn btn-cyan" href="#lista-de-espera">Unirme a la lista de espera</a>
-        </article>
-        <article class="plan-card">
-          <h3 class="plan-name">Pro</h3>
-          <p class="plan-price">$39.900 <small>COP / mes</small></p>
-          <p>Para tu sistema completo en una sola app.</p>
-          <ul>
-            <li>Todo lo de Plus</li>
-            <li>Todos los módulos en una sola app</li>
-            <li>Prioridad en avisos de lanzamiento</li>
-          </ul>
-          <a class="btn btn-ghost" href="#lista-de-espera">Unirme a la lista de espera</a>
-        </article>
+      <div class="plan-coming-soon">
+        <p><b>Sin planes de compra por ahora.</b> Cuando haya información confirmada, la compartiremos aquí.</p>
+        <a class="btn btn-ghost" href="#lista-de-espera">Recibir aviso de lanzamiento</a>
       </div>
-      <p class="plan-note">Precios de ejemplo, por confirmar: $0 COP, $19.900 COP/mes y $39.900 COP/mes no son precios finales ni una oferta de compra. La app está próximamente en Google Play y no hay enlace de descarga.</p>
     </div>
   </section>
 
@@ -318,25 +288,25 @@
       <div>
         <div class="sec-head">
           <p class="kick">Lista de espera</p>
-          <h2>Entra entre los primeros 100 usuarios</h2>
-          <p>El objetivo inmediato de Motiva-Me es publicarse en Google Play y llegar a sus primeros 100 usuarios. La lista de espera es cómo aseguras tu lugar en ese primer grupo.</p>
+          <h2>Recibe noticias sobre el lanzamiento</h2>
+          <p>El objetivo inmediato de Motiva-Me es publicarse en Google Play. Apuntarte permite solicitar avisos sobre el lanzamiento; no reserva un lugar ni garantiza prioridad, acceso anticipado o disponibilidad.</p>
         </div>
         <ol class="steps">
-          <li><div><b>Deja tu correo</b><span>Completa el formulario y envía tu solicitud al correo oficial del proyecto.</span></div></li>
-          <li><div><b>Recibe el aviso de lanzamiento</b><span>Cuando la app esté publicada en Google Play, te escribimos con el enlace de descarga real.</span></div></li>
+          <li><div><b>Deja tu correo</b><span>Completa el formulario para solicitar avisos sobre el lanzamiento de la app.</span></div></li>
+          <li><div><b>Recibe el aviso de lanzamiento</b><span>El propósito de la lista es compartir novedades y el enlace de descarga cuando esté disponible.</span></div></li>
           <li><div><b>Empieza tu cambio</b><span>Instala, crea tu primer hábito y agenda el primer paso de tu meta el mismo día.</span></div></li>
         </ol>
       </div>
       <form class="wait-form" id="waitForm" action="https://formspree.io/f/meaalnpr" method="POST">
-        <label for="wName">Tu nombre</label>
+        <label for="wName">Tu nombre <span style="color:var(--muted-2);font-weight:600">(opcional)</span></label>
         <input id="wName" name="name" type="text" autocomplete="name" placeholder="¿Cómo te llamas?" />
         <label for="wEmail">Tu correo electrónico</label>
         <input id="wEmail" name="email" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com" required />
         <label for="wGoal">¿Qué quieres lograr primero? <span style="color:var(--muted-2);font-weight:600">(opcional)</span></label>
         <input id="wGoal" name="goal" type="text" placeholder="Ej.: ordenar mis finanzas, crear un hábito…" />
         <button class="btn btn-magenta" type="submit" style="width:100%">Quiero unirme a la lista de espera</button>
-        <p class="fine">Al enviar, tus datos se enviarán por el formulario de lista de espera del proyecto. Sin lista de espera por correo: este formulario ya no usa mailto.</p>
-        <div class="wait-msg" id="waitMsg" role="status"></div>
+        <p class="fine" id="waitPrivacy">Usaremos el nombre y el correo que indiques, y la meta opcional, para gestionar avisos sobre el lanzamiento. El envío se procesa mediante Formspree. Para solicitar la baja de avisos, escribe a <a href="mailto:motiva.me.redes@gmail.com">motiva.me.redes@gmail.com</a>. Este aviso breve no sustituye una política completa; falta confirmar quién será el responsable del tratamiento, los plazos de conservación, la jurisdicción aplicable y los detalles de tratamiento de Formspree.</p>
+        <div class="wait-msg" id="waitMsg" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
       </form>
     </div>
   </section>
@@ -419,6 +389,10 @@
         <a href="#que-es">Qué es</a>
         <a href="#modulos">Módulos</a>
         <a href="#cursos">Cursos</a>
+        <a href="#tu-dia">Un día con Motiva-Me</a>
+        <a href="#valores">Valores</a>
+        <a href="#planes">Planes</a>
+        <a href="#faq">FAQ</a>
         <a href="#lista-de-espera">Lista de espera</a>
       </nav>
       <nav aria-label="Redes sociales">

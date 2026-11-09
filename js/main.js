@@ -1,7 +1,6 @@
 (function(){
   "use strict";
-  // Explorador de módulos: contenido ya está en el HTML (sin JS no queda vacío).
-  // JS solo cambia qué panel se muestra, con el mismo patrón tablist/tabs de antes.
+  // Explorador de módulos: botones nativos, activables con Tab, Enter y Espacio.
   var list = document.getElementById("modList");
   var panel = document.getElementById("modPanel");
   if(list && panel){
@@ -10,7 +9,7 @@
     btns.forEach(function(btn){
       btn.addEventListener("click", function(){
         var id = btn.getAttribute("data-module");
-        btns.forEach(function(b){ b.setAttribute("aria-selected", b===btn ? "true" : "false"); });
+        btns.forEach(function(b){ b.setAttribute("aria-pressed", b===btn ? "true" : "false"); });
         panels.forEach(function(p){
           if(p.getAttribute("data-panel")===id){ p.removeAttribute("hidden"); }
           else { p.setAttribute("hidden", ""); }
@@ -83,20 +82,10 @@
 
   /* ---------- Preloader: rápido y con salida garantizada ---------- */
   var pre = document.getElementById("preloader");
-  var prePct = document.getElementById("prePct");
-  var preBar = document.getElementById("preBar");
   function hidePre(){ document.body.classList.add("loaded"); if(pre){ pre.classList.add("done"); setTimeout(function(){ if(pre && pre.parentNode) pre.parentNode.removeChild(pre); }, 700); } }
+  if(pre) pre.classList.add("active");
   if(reduceMotion){ hidePre(); }
-  else if(pre){
-    var p = 0;
-    var preTimer = setInterval(function(){
-      p = Math.min(100, p + 7 + Math.random() * 9);
-      if(prePct) prePct.textContent = Math.floor(p) + "%";
-      if(preBar) preBar.style.width = p + "%";
-      if(p >= 100){ clearInterval(preTimer); setTimeout(hidePre, 140); }
-    }, 68);
-    setTimeout(function(){ clearInterval(preTimer); hidePre(); }, 1700); /* nunca atrapa el contenido */
-  }
+  else if(pre){ setTimeout(hidePre, 900); } /* decorativo; nunca espera la carga de recursos */
 
   /* ---------- Dividir titulares en palabras (tipografía cinética) ---------- */
   function splitWords(el){
@@ -284,20 +273,14 @@
     }, { threshold: .35 }).observe(facts);
   }
 
-  /* ---------- Progreso de scroll + respiración de la banda al hacer scroll ---------- */
+  /* ---------- Progreso de scroll ---------- */
   var prog = document.getElementById("scrollProgress");
-  var band = document.querySelector(".marquee-band");
-  var lastY = window.scrollY, tickingP = false;
+  var tickingP = false;
   function updateProgress(){
     var max = document.documentElement.scrollHeight - window.innerHeight;
     var k = max > 0 ? window.scrollY / max : 0;
     if(prog) prog.style.transform = "scaleX(" + k + ")";
-    if(band && !reduceMotion){
-      var vel = Math.max(-14, Math.min(14, (window.scrollY - lastY) * .35));
-      band.style.transform = "skewX(" + (-vel * .4) + "deg)";
-      clearTimeout(band._skT); band._skT = setTimeout(function(){ band.style.transform = "skewX(0deg)"; }, 120);
-    }
-    lastY = window.scrollY; tickingP = false;
+    tickingP = false;
   }
   window.addEventListener("scroll", function(){ if(!tickingP){ tickingP = true; requestAnimationFrame(updateProgress); } }, { passive: true });
   updateProgress();
@@ -309,4 +292,46 @@
       modPanel.classList.remove("panel-enter"); void modPanel.offsetWidth; modPanel.classList.add("panel-enter");
     }).observe(modPanel, { childList: true });
   }
+})();
+
+(function(){
+  "use strict";
+  var form = document.getElementById("waitForm");
+  var status = document.getElementById("waitMsg");
+  if(!form || !status || !window.fetch || !window.FormData) return;
+  var submit = form.querySelector('button[type="submit"]');
+  if(!submit) return;
+  var idleLabel = submit.textContent;
+
+  function showState(state, message){
+    status.dataset.state = state;
+    status.textContent = message;
+    status.classList.add("show");
+  }
+
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+    if(form.dataset.sending === "true") return;
+    form.dataset.sending = "true";
+    form.setAttribute("aria-busy", "true");
+    submit.disabled = true;
+    submit.textContent = "Enviando…";
+    showState("sending", "Enviando tu solicitud…");
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(function(response){
+      if(!response.ok) throw new Error("Respuesta HTTP " + response.status);
+      showState("success", "Formspree respondió que el envío se procesó correctamente. Gracias por tu interés.");
+    }).catch(function(){
+      showState("error", "No pudimos confirmar el envío. Tus datos siguen en el formulario; revisa tu conexión e inténtalo de nuevo con el botón.");
+    }).finally(function(){
+      form.dataset.sending = "false";
+      form.removeAttribute("aria-busy");
+      submit.disabled = false;
+      submit.textContent = idleLabel;
+    });
+  });
 })();
